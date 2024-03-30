@@ -21,8 +21,16 @@ const binaryStringToArray = str => {
   return binary8bitStr.split(',');
 };
 
+
 const binaryToAscii = str => {
-  // Your code here 
+
+  const binaryArray = binaryStringToArray(str);
+
+
+  const asciiChars = binaryArray.map(binary => String.fromCharCode(parseInt(binary, 2)));
+
+  
+  return asciiChars.join('');
 };
 
 /******************************************************************************/
